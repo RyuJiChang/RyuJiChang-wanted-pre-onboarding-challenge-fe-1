@@ -1,46 +1,115 @@
-# Getting Started with Create React App
+# 프리온보딩 프론트엔드 챌린지 1월 사전과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📕 개요
 
-## Available Scripts
+**📎[배포링크 바로가기](배포 후 링크 작성 예정)**
 
-In the project directory, you can run:
+### 과제 목적
 
-### `npm start`
+1. 챌린지 참여를 다짐하고 학습을 준비하기 위한 용도로 사전 제작
+2. 기업의 기술 과제를 수행하며 흔히 저지를 수 있는 안 좋은 습관을 없애기
+3. 나쁜 코드에 대한 기준을 세우고 과락하지 않는 기본기를 갖춘 코드를 작성하기
+4. 기업 채용 과제를 수행하며 스스로 점검할 수 있는 체크리스트를 만들기
+5. 기술 면접 질문을 효과적으로 준비하고 좋은 답변에 대한 기준을 세우기
+6. 취업에 성공해서 프론트엔드 개발자로서 멋지게 커리어를 시작하기
+7. Git Commit Message, History 관리, 협업 툴을 사용해서 협업에 익숙해지기
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 기간
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2023년 1월 1일(일) - 2023년 1월 2일(월)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 👨‍👩‍👧‍👦 Member
 
-### `npm run build`
+| 류지창                                                                                           |
+| ------------------------------------------------------------------------------------------------ |
+| <img src="https://avatars.githubusercontent.com/u/104156381?s=70&v=4" width="100" height="100"/> |
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🖥 Demo(gif 생성 예정)
+회원가입 동작 시연<br><br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+로그인 동작 시연<br><br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+CRUD, 체크박스 동작 시연<br><br>
 
-### `npm run eject`
+리다이렉트 동작 시연<br><br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚡️ 사용 라이브러리
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. React
+2. TypeScript
+3. React-router-dom
+4. Styled-components
+5. Axios
+7. ESLint
+8. Prettier
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## ✅ 요구사항
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1) Login / SignUp
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- /auth 경로에 로그인 / 회원가입 기능을 개발합니다
+  - 로그인, 회원가입을 별도의 경로로 분리해도 무방합니다
+  - [ ] 최소한 이메일, 비밀번호 input, 제출 button을 갖도록 구성해주세요
+- 이메일과 비밀번호의 유효성을 확인합니다
+  - [ ]  이메일 조건 : 최소 @, . 포함
+  - [ ]  비밀번호 조건 : 8자 이상 입력
+  - [ ]  이메일과 비밀번호가 모두 입력되어 있고, 조건을 만족해야 제출 버튼이 활성화 되도록 해주세요
+- 로그인 API를 호출하고, 올바른 응답을 받았을 때 루트 경로로 이동시켜주세요
+  - [ ] 응답으로 받은 토큰은 로컬 스토리지에 저장해주세요
+  - [ ] 다음 번에 로그인 시 토큰이 존재한다면 루트 경로로 리다이렉트 시켜주세요
+  - [ ] 어떤 경우든 토큰이 유효하지 않다면 사용자에게 알리고 로그인 페이지로 리다이렉트 시켜주세요
+
+### 2) Todo List
+
+- Todo List API를 호출하여 Todo List CRUD 기능을 구현해주세요
+  - [ ] 목록 / 상세 영역으로 나누어 구현해주세요
+  - [ ] Todo 목록을 볼 수 있습니다.
+  - [ ] Todo 추가 버튼을 클릭하면 할 일이 추가 됩니다.
+  - [ ] Todo 수정 버튼을 클릭하면 수정 모드를 활성화하고, 수정 내용을 제출하거나 취소할 수 있습니다.
+  - [ ] Todo 삭제 버튼을 클릭하면 해당 Todo를 삭제할 수 있습니다.
+- 한 화면 내에서 Todo List와 개별 Todo의 상세를 확인할 수 있도록 해주세요.
+  - [ ] 새로고침을 했을 때 현재 상태가 유지되어야 합니다.
+  - [ ] 개별 Todo를 조회 순서에 따라 페이지 뒤로가기를 통하여 조회할 수 있도록 해주세요.
+- 한 페이지 내에서 새로고침 없이 데이터가 정합성을 갖추도록 구현해주세요
+  - [ ] 수정되는 Todo의 내용이 목록에서도 실시간으로 반영되어야 합니다
+---
+
+## 🐙 Git
+
+| rule     | 설명                                                     |
+| -------- | -------------------------------------------------------- |
+| feat     | 새로운 기능 추가                                         |
+| fix      | 버그 수정                                                |
+| !HOTFIX  | 급하게 치명적인 버그를 고쳐야하는 경우                   |
+| docs     | 문서 수정                                                |
+| style    | 코드 formatting, 세미콜론(;) 누락, 코드 변경이 없는 경우 |
+| refactor | 코드 리팩토링                                            |
+| test     | 테스트 코드, 리팩토링 테스트 코드 추가                   |
+| chore    | 빌드 업무 수정, 패키지 매니저 수정                       |
+
+- ### 📘 **Git branch strategy**
+
+**git-flow** 사용
+
+- feature branches
+- develop
+- release branches
+- hotfixes
+- main
+
+branch명 규칙: `커밋 타입`/#`이슈번호` 포멧으로 생성
+commit 메시지 규칙: `커밋타입`: `내용` 포멧으로 작성
+
+## 📢 프로젝트 실행방법
+
+```
+npm install
+npm start
+```
